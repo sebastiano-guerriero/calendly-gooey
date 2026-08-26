@@ -75,3 +75,7 @@
 @utility corner-round {
   corner-shape: round;
 }
+
+@utility corner-squircle {
+  corner-shape: squircle;
+}
