@@ -7,9 +7,46 @@
   </head>
   <body>
     <main class="flex items-center justify-center min-h-screen font-primary">
-      <div data-name="frame" class="relative size-135 bg-[#86B9EE] isolate overflow-hidden flex">
-        <div class="m-auto">
-          <ul class="flex items-center justify-center">
+      <div data-name="frame" class="relative size-135 bg-[#86B9EE] isolate overflow-hidden">
+        <svg class="absolute size-0" aria-hidden="true">
+          <filter id="gooey" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+            <feColorMatrix
+              in="blur"
+              type="matrix"
+              values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 50 -25"
+            />
+          </filter>
+        </svg>
+
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div data-gooey class="flex flex-col items-center">
+            <ul data-gooey-menu class="flex items-center justify-center gap-5 mb-6" aria-hidden="true">
+              <li class="size-[56px]">
+                <span data-item-gooey-bg class="block size-full bg-white rounded-[28px]"></span>
+              </li>
+              <li class="size-[56px]">
+                <span data-item-gooey-bg class="block size-full bg-white rounded-[28px]"></span>
+              </li>
+              <li class="size-[56px]">
+                <span data-item-gooey-bg class="block size-full bg-white rounded-[28px]"></span>
+              </li>
+              <li class="size-[56px]">
+                <span data-item-gooey-bg class="block size-full bg-white rounded-[28px]"></span>
+              </li>
+            </ul>
+
+            <div data-panel class="w-[440px] h-[240px] bg-white corner-squircle rounded-[48px]"></div>
+          </div>
+        </div>
+
+        <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+          <div class="flex flex-col items-center">
+            <ul data-menu class="flex items-center justify-center gap-5 mb-6 pointer-events-auto">
             <li class="relative size-[56px] cursor-pointer">
               <svg class="absolute left-1/2 top-1/2 -translate-1/2 size-8 z-3" preserveAspectRatio="xMidYMid meet" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="-6.0520 -3.3320 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="Vector">
@@ -18,7 +55,7 @@
                 </g>
               </svg>
 
-              <span data-item-gooey-bg class="absolute z-1 inset-0 bg-white rounded-[28px]"></span>
+              <span data-item-bg class="absolute z-1 inset-0 bg-white rounded-[28px]"></span>
 
               <span class="absolute z-2 inset-1 rounded-[24px] bg-[#DFE3E7]"></span>
             </li>
@@ -31,7 +68,7 @@
                 </g>
               </svg>
 
-              <span data-item-gooey-bg class="absolute z-1 inset-0 bg-white rounded-[28px]"></span>
+              <span data-item-bg class="absolute z-1 inset-0 bg-white rounded-[28px]"></span>
 
               <span class="absolute z-2 inset-1 rounded-[24px] bg-[#DFE3E7]"></span>
             </li>
@@ -44,7 +81,7 @@
                 </g>
               </svg>
 
-              <span data-item-gooey-bg class="absolute z-1 inset-0 bg-white rounded-[28px]"></span>
+              <span data-item-bg class="absolute z-1 inset-0 bg-white rounded-[28px]"></span>
 
               <span class="absolute z-2 inset-1 rounded-[24px] bg-[#DFE3E7]"></span>
             </li>
@@ -57,14 +94,12 @@
                 </g>
               </svg>
 
-              <span data-item-gooey-bg class="absolute z-1 inset-0 bg-white rounded-[28px]"></span>
+              <span data-item-bg class="absolute z-1 inset-0 bg-white rounded-[28px]"></span>
 
               <span class="absolute z-2 inset-1 rounded-[24px] bg-[#DFE3E7]"></span>
             </li>
-          </ul>
-
-          <div class="w-[440px] h-[240px] bg-white corner-squircle rounded-[48px]">
-
+            </ul>
+            <div class="w-[440px] h-[240px]" aria-hidden="true"></div>
           </div>
         </div>
       </div>

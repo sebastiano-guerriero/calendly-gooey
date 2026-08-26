@@ -79,3 +79,23 @@
 @utility corner-squircle {
   corner-shape: squircle;
 }
+
+@layer components {
+  [data-gooey] {
+    filter: url("#gooey");
+  }
+
+  [data-menu] li,
+  [data-gooey-menu] li {
+    transition: transform 560ms var(--ease-spring);
+  }
+
+  [data-menu] li[data-selected],
+  [data-gooey-menu] li[data-selected] {
+    transform: translateY(18px);
+  }
+
+  [data-menu] [data-item-bg] {
+    opacity: 0;
+  }
+}
