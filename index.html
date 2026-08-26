@@ -8,10 +8,15 @@
   <body>
     <main class="flex items-center justify-center min-h-screen font-primary">
       <div data-name="frame" class="relative size-135 bg-[#86B9EE] isolate overflow-hidden">
+        <!-- background -->
+        <figure class="absolute inset-0 z-0 overflow-hidden blur-2xl">
+          <img class="h-[540px] max-w-none" src="./assets/bg-2.svg" alt="" />
+        </figure>
+
         <!-- Gooey filter definition (blur + contrast). Referenced by CSS as url("#gooey"). -->
         <svg class="absolute size-0" aria-hidden="true">
           <filter id="gooey" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
             <feColorMatrix
               in="blur"
               type="matrix"

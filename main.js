@@ -1,6 +1,7 @@
 import "./tailwind.css";
 
 document.addEventListener("DOMContentLoaded", () => {
+  const frame = document.querySelector("[data-name=frame]");
   const items = [...document.querySelectorAll("[data-menu] li")];
   const gooeyItems = [...document.querySelectorAll("[data-gooey-menu] li")];
   const connectItems = [...document.querySelectorAll("[data-gooey-connect] li")];
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gooeyItems[i].toggleAttribute("data-selected", selected);
       connectItems[i].toggleAttribute("data-selected", selected);
     });
+    frame.style.setProperty("--bg-index", index);
   }
 
   items.forEach((item, i) => {
