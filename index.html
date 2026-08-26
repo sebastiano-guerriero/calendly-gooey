@@ -11,7 +11,7 @@
         <!-- Gooey filter definition (blur + contrast). Referenced by CSS as url("#gooey"). -->
         <svg class="absolute size-0" aria-hidden="true">
           <filter id="gooey" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+            <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
             <feColorMatrix
               in="blur"
               type="matrix"
@@ -19,7 +19,7 @@
                 1 0 0 0 0
                 0 1 0 0 0
                 0 0 1 0 0
-                0 0 0 50 -25"
+                0 0 0 55 -32"
             />
           </filter>
         </svg>
@@ -32,18 +32,18 @@
               so neighboring nav items do not merge.
             -->
             <div data-gooey class="col-start-1 row-start-1 flex flex-col items-center">
-              <ul data-gooey-connect class="flex items-center justify-center gap-1.5 mb-6" aria-hidden="true">
+              <ul data-gooey-connect class="flex items-center justify-center gap-1.5 mb-4" aria-hidden="true">
                 <li class="size-[58px]">
-                  <span data-item-gooey-bg class="block size-full bg-white rounded-[16px]"></span>
+                  <span data-item-gooey-bg class="block size-full bg-white rounded-[26px]"></span>
                 </li>
                 <li class="size-[58px]">
-                  <span data-item-gooey-bg class="block size-full bg-white rounded-[16px]"></span>
+                  <span data-item-gooey-bg class="block size-full bg-white rounded-[26px]"></span>
                 </li>
                 <li class="size-[58px]">
-                  <span data-item-gooey-bg class="block size-full bg-white rounded-[16px]"></span>
+                  <span data-item-gooey-bg class="block size-full bg-white rounded-[26px]"></span>
                 </li>
                 <li class="size-[58px]">
-                  <span data-item-gooey-bg class="block size-full bg-white rounded-[16px]"></span>
+                  <span data-item-gooey-bg class="block size-full bg-white rounded-[26px]"></span>
                 </li>
               </ul>
 
@@ -55,18 +55,18 @@
               the gooey edge but never melt into each other. Hidden when that item is selected
               (layer A takes over for the panel join).
             -->
-            <ul data-gooey-menu class="col-start-1 row-start-1 self-start flex items-center justify-center gap-1.5 mb-6" aria-hidden="true">
+            <ul data-gooey-menu class="col-start-1 row-start-1 self-start flex items-center justify-center gap-1.5 mb-4" aria-hidden="true">
               <li class="size-[58px]">
-                <span data-item-gooey-bg class="block size-full bg-white rounded-[16px]"></span>
+                <span data-item-gooey-bg class="block size-full bg-white rounded-[26px]"></span>
               </li>
               <li class="size-[58px]">
-                <span data-item-gooey-bg class="block size-full bg-white rounded-[16px]"></span>
+                <span data-item-gooey-bg class="block size-full bg-white rounded-[26px]"></span>
               </li>
               <li class="size-[58px]">
-                <span data-item-gooey-bg class="block size-full bg-white rounded-[16px]"></span>
+                <span data-item-gooey-bg class="block size-full bg-white rounded-[26px]"></span>
               </li>
               <li class="size-[58px]">
-                <span data-item-gooey-bg class="block size-full bg-white rounded-[16px]"></span>
+                <span data-item-gooey-bg class="block size-full bg-white rounded-[26px]"></span>
               </li>
             </ul>
           </div>
@@ -75,7 +75,7 @@
         <!-- Clickable overlay: icons + gray circles. Not filtered, so they stay sharp. -->
         <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <div class="flex flex-col items-center">
-            <ul data-menu class="flex items-center justify-center gap-2 h-[58px] mb-6 pointer-events-auto">
+            <ul data-menu class="flex items-center justify-center gap-2 h-[58px] mb-4 pointer-events-auto">
             <li class="relative size-[56px] cursor-pointer">
               <svg class="absolute left-1/2 top-1/2 -translate-1/2 size-8 z-3" preserveAspectRatio="xMidYMid meet" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="-6.0520 -3.3320 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="Vector">
