@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach((item, i) => {
       const selected = i === index;
       item.toggleAttribute("data-selected", selected);
+      item.toggleAttribute("data-active", selected);
       gooeyItems[i].toggleAttribute("data-selected", selected);
       connectItems[i].toggleAttribute("data-selected", selected);
     });
